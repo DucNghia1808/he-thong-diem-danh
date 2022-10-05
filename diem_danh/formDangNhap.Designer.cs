@@ -76,7 +76,6 @@
             this.mkDangNhap.PasswordChar = '*';
             this.mkDangNhap.Size = new System.Drawing.Size(170, 39);
             this.mkDangNhap.TabIndex = 3;
-            this.mkDangNhap.UseSystemPasswordChar = true;
             // 
             // text_day
             // 
@@ -111,6 +110,7 @@
             this.quenMK.AutoSize = true;
             this.quenMK.BackColor = System.Drawing.Color.Transparent;
             this.quenMK.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.quenMK.LinkColor = System.Drawing.SystemColors.HotTrack;
             this.quenMK.Location = new System.Drawing.Point(669, 308);
             this.quenMK.Name = "quenMK";
             this.quenMK.Size = new System.Drawing.Size(109, 16);
@@ -122,7 +122,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(577, 100);
+            this.pictureBox4.Location = new System.Drawing.Point(576, 92);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(178, 100);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -156,7 +156,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label8.Location = new System.Drawing.Point(542, 72);
+            this.label8.Location = new System.Drawing.Point(559, 54);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(213, 22);
             this.label8.TabIndex = 82;
@@ -299,6 +299,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.checkBox1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.checkBox1.Location = new System.Drawing.Point(538, 308);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(125, 20);

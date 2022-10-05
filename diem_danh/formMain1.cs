@@ -20,6 +20,8 @@ namespace diem_danh
         {
             InitializeComponent();
             ThoiGian.Start();
+            userControl11.Hide();
+            userControl21.Hide();   
         }
 
         private void btDangXuat_ItemClick(object sender, ItemClickEventArgs e)
@@ -29,42 +31,14 @@ namespace diem_danh
 
         private void formMain1_Load(object sender, EventArgs e)
         {
-            string[] myport = SerialPort.GetPortNames();
-            comboPORT.Items.AddRange(myport);// get port
+            //string[] myport = SerialPort.GetPortNames();
+            //comboPORT.Items.AddRange(myport);// get port
         }
 
-        private void comPortConnect_Click(object sender, EventArgs e)
+       /* private void comPortConnect_Click(object sender, EventArgs e)
         {
-            if (comboPORT.Text == "")
-            {
-                MessageBox.Show("Vui lòng kết nối cổng serial!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            try
-            {
-                if (serialPort1.IsOpen)
-                {
-                    serialPort1.Close();
-                    comboPORT.Enabled = true;
-                    comPortConnect.Text = "Connect";
-                    MessageBox.Show("Cổng serial đã đóng!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    serialPort1.PortName = comboPORT.Text;
-                    serialPort1.BaudRate = 115200; // Int.Parse(comboBaudrate.Text) // baudrate
-                    comboPORT.Enabled = false;
-                    serialPort1.Open();
-                    comPortConnect.Text = "Disconnect";
-                    MessageBox.Show("Đã kết nối!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Không thể kết nối cổng serial!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+            
+        }*/
 
         private void formMain1_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -132,6 +106,20 @@ namespace diem_danh
         private void simpleButton1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Không thể kết nối cổng serial!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void trangChinh_Click(object sender, EventArgs e)
+        {
+            userControl11.Show();
+            userControl11.BringToFront();
+            userControl21.Hide();
+        }
+
+        private void trangPhu_Click(object sender, EventArgs e)
+        {
+            userControl21.Show();
+            userControl21.BringToFront();
+            userControl11.Hide();
         }
     }
 }

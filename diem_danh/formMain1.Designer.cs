@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMain1));
             this.repositoryItemComboBox3 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
@@ -63,8 +64,6 @@
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup11 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup8 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -76,23 +75,22 @@
             this.ThoiGian = new System.Windows.Forms.Timer(this.components);
             this.text_day = new System.Windows.Forms.Label();
             this.text_time = new System.Windows.Forms.Label();
-            this.comboPORT = new System.Windows.Forms.ComboBox();
-            this.comPortConnect = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.comboPORT11 = new DevExpress.XtraBars.BarEditItem();
             this.barStaticItem1 = new DevExpress.XtraBars.BarStaticItem();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.trangChinh = new System.Windows.Forms.Button();
+            this.trangPhu = new System.Windows.Forms.Button();
+            this.QuanLyXem = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.userControl21 = new diem_danh.UserControl2();
+            this.userControl11 = new diem_danh.UserControl1();
             this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.ribbonPage6 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
@@ -103,14 +101,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
-            this.splitContainerControl1.Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
-            this.splitContainerControl1.Panel2.SuspendLayout();
-            this.splitContainerControl1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // repositoryItemComboBox3
@@ -162,14 +157,13 @@
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
             this.ribbonPage2,
-            this.ribbonPage3,
             this.ribbonPage4});
             this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
             this.repositoryItemPictureEdit1,
             this.repositoryItemComboBox2,
             this.repositoryItemComboBox4});
-            this.ribbon.Size = new System.Drawing.Size(844, 158);
+            this.ribbon.Size = new System.Drawing.Size(864, 158);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // btDangXuat
@@ -380,18 +374,6 @@
             this.ribbonPageGroup11.Name = "ribbonPageGroup11";
             this.ribbonPageGroup11.Text = "ribbonPageGroup11";
             // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup3});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Thống kê";
-            // 
-            // ribbonPageGroup3
-            // 
-            this.ribbonPageGroup3.Name = "ribbonPageGroup3";
-            this.ribbonPageGroup3.Text = "ribbonPageGroup3";
-            // 
             // ribbonPage4
             // 
             this.ribbonPage4.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -434,10 +416,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 425);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 552);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbon;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(844, 24);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(864, 24);
             // 
             // ThoiGian
             // 
@@ -461,41 +443,11 @@
             this.text_time.BackColor = System.Drawing.Color.Transparent;
             this.text_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_time.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.text_time.Location = new System.Drawing.Point(532, 139);
+            this.text_time.Location = new System.Drawing.Point(631, 139);
             this.text_time.Name = "text_time";
             this.text_time.Size = new System.Drawing.Size(36, 16);
             this.text_time.TabIndex = 74;
             this.text_time.Text = "time";
-            // 
-            // comboPORT
-            // 
-            this.comboPORT.FormattingEnabled = true;
-            this.comboPORT.Location = new System.Drawing.Point(55, 80);
-            this.comboPORT.Name = "comboPORT";
-            this.comboPORT.Size = new System.Drawing.Size(121, 21);
-            this.comboPORT.TabIndex = 71;
-            // 
-            // comPortConnect
-            // 
-            this.comPortConnect.Location = new System.Drawing.Point(161, 47);
-            this.comPortConnect.Name = "comPortConnect";
-            this.comPortConnect.Size = new System.Drawing.Size(111, 31);
-            this.comPortConnect.TabIndex = 72;
-            this.comPortConnect.Text = "Connect";
-            this.comPortConnect.UseVisualStyleBackColor = true;
-            this.comPortConnect.Click += new System.EventHandler(this.comPortConnect_Click);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Silver;
-            this.button10.Font = new System.Drawing.Font("Microsoft YaHei", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button10.Location = new System.Drawing.Point(64, 50);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(91, 24);
-            this.button10.TabIndex = 73;
-            this.button10.Text = "COM PORT";
-            this.button10.UseVisualStyleBackColor = false;
             // 
             // ribbonPageGroup7
             // 
@@ -527,80 +479,111 @@
             // groupControl1
             // 
             this.groupControl1.CaptionImageOptions.Image = global::diem_danh.Properties.Resources.switchrowcolumn_32x32;
-            this.groupControl1.Controls.Add(this.splitContainerControl1);
+            this.groupControl1.Controls.Add(this.splitContainer1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(0, 158);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(844, 267);
+            this.groupControl1.Size = new System.Drawing.Size(864, 394);
             this.groupControl1.TabIndex = 78;
             this.groupControl1.Text = "groupControl1";
             this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
-            // splitContainerControl1
+            // splitContainer1
             // 
-            this.splitContainerControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(2, 33);
-            this.splitContainerControl1.Name = "splitContainerControl1";
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(2, 33);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // splitContainerControl1.Panel1
+            // splitContainer1.Panel1
             // 
-            this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton2);
-            this.splitContainerControl1.Panel1.Controls.Add(this.simpleButton1);
-            this.splitContainerControl1.Panel1.Controls.Add(this.windowsUIButtonPanel1);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.trangChinh);
+            this.splitContainer1.Panel1.Controls.Add(this.trangPhu);
+            this.splitContainer1.Panel1.Controls.Add(this.QuanLyXem);
             // 
-            // splitContainerControl1.Panel2
+            // splitContainer1.Panel2
             // 
-            this.splitContainerControl1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(840, 232);
-            this.splitContainerControl1.TabIndex = 0;
+            this.splitContainer1.Panel2.Controls.Add(this.panel1);
+            this.splitContainer1.Size = new System.Drawing.Size(860, 359);
+            this.splitContainer1.SplitterDistance = 181;
+            this.splitContainer1.TabIndex = 0;
             // 
-            // windowsUIButtonPanel1
+            // trangChinh
             // 
-            this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
-            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(34, 79);
-            this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
-            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(75, 23);
-            this.windowsUIButtonPanel1.TabIndex = 0;
-            this.windowsUIButtonPanel1.Text = "windowsUIButtonPanel1";
+            this.trangChinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.trangChinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.trangChinh.ForeColor = System.Drawing.Color.White;
+            this.trangChinh.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
+            this.trangChinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.trangChinh.Location = new System.Drawing.Point(27, 37);
+            this.trangChinh.Name = "trangChinh";
+            this.trangChinh.Size = new System.Drawing.Size(137, 43);
+            this.trangChinh.TabIndex = 10;
+            this.trangChinh.Text = "Trang Chính";
+            this.trangChinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.trangChinh.UseVisualStyleBackColor = false;
+            this.trangChinh.Click += new System.EventHandler(this.trangChinh_Click);
             // 
-            // tabControl1
+            // trangPhu
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(726, 228);
-            this.tabControl1.TabIndex = 0;
+            this.trangPhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.trangPhu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.trangPhu.ForeColor = System.Drawing.Color.White;
+            this.trangPhu.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
+            this.trangPhu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.trangPhu.Location = new System.Drawing.Point(27, 86);
+            this.trangPhu.Name = "trangPhu";
+            this.trangPhu.Size = new System.Drawing.Size(137, 43);
+            this.trangPhu.TabIndex = 9;
+            this.trangPhu.Text = "Kết Nối";
+            this.trangPhu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.trangPhu.UseVisualStyleBackColor = false;
+            this.trangPhu.Click += new System.EventHandler(this.trangPhu_Click);
             // 
-            // tabPage1
+            // QuanLyXem
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(718, 202);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.QuanLyXem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.QuanLyXem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.QuanLyXem.ForeColor = System.Drawing.Color.White;
+            this.QuanLyXem.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
+            this.QuanLyXem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.QuanLyXem.Location = new System.Drawing.Point(38, 220);
+            this.QuanLyXem.Name = "QuanLyXem";
+            this.QuanLyXem.Size = new System.Drawing.Size(96, 43);
+            this.QuanLyXem.TabIndex = 8;
+            this.QuanLyXem.Text = "Xem   ";
+            this.QuanLyXem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.QuanLyXem.UseVisualStyleBackColor = false;
             // 
-            // tabPage2
+            // panel1
             // 
-            this.tabPage2.Controls.Add(this.comPortConnect);
-            this.tabPage2.Controls.Add(this.button10);
-            this.tabPage2.Controls.Add(this.comboPORT);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(718, 202);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.panel1.Controls.Add(this.userControl21);
+            this.panel1.Controls.Add(this.userControl11);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(675, 359);
+            this.panel1.TabIndex = 2;
+            // 
+            // userControl21
+            // 
+            this.userControl21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl21.BackgroundImage")));
+            this.userControl21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl21.Location = new System.Drawing.Point(0, 0);
+            this.userControl21.Name = "userControl21";
+            this.userControl21.Size = new System.Drawing.Size(675, 359);
+            this.userControl21.TabIndex = 1;
+            // 
+            // userControl11
+            // 
+            this.userControl11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl11.BackgroundImage")));
+            this.userControl11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl11.Location = new System.Drawing.Point(0, 0);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(675, 359);
+            this.userControl11.TabIndex = 0;
             // 
             // barButtonItem3
             // 
@@ -618,29 +601,31 @@
             this.barButtonItem4.ImageOptions.LargeImage = global::diem_danh.Properties.Resources.bopermission_32x321;
             this.barButtonItem4.Name = "barButtonItem4";
             // 
-            // simpleButton2
+            // ribbonPage6
             // 
-            this.simpleButton2.ImageOptions.Image = global::diem_danh.Properties.Resources.encryptdocument_32x32;
-            this.simpleButton2.Location = new System.Drawing.Point(13, 103);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton2.TabIndex = 2;
-            this.simpleButton2.Text = "simpleButton2";
+            this.ribbonPage6.Name = "ribbonPage6";
+            this.ribbonPage6.Text = "ribbonPage6";
             // 
-            // simpleButton1
+            // button1
             // 
-            this.simpleButton1.ImageOptions.Image = global::diem_danh.Properties.Resources.insert_32x32;
-            this.simpleButton1.Location = new System.Drawing.Point(8, 135);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "simpleButton1";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(27, 135);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(137, 43);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Thống kê";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // formMain1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(844, 449);
+            this.ClientSize = new System.Drawing.Size(864, 576);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.text_day);
             this.Controls.Add(this.text_time);
@@ -664,14 +649,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
-            this.splitContainerControl1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
-            this.splitContainerControl1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
-            this.splitContainerControl1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -693,17 +675,12 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.Timer ThoiGian;
         private System.Windows.Forms.Label text_day;
         private System.Windows.Forms.Label text_time;
-        private System.Windows.Forms.ComboBox comboPORT;
-        private System.Windows.Forms.Button comPortConnect;
-        private System.Windows.Forms.Button button10;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.BarEditItem comboPORT1;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
@@ -732,15 +709,17 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup11;
-        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button trangChinh;
+        private System.Windows.Forms.Button trangPhu;
+        private System.Windows.Forms.Button QuanLyXem;
+        private UserControl2 userControl21;
+        private UserControl1 userControl11;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage6;
     }
 }

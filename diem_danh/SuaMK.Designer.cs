@@ -50,7 +50,7 @@
             this.HuySuaMK.Image = global::diem_danh.Properties.Resources.close_32x32;
             this.HuySuaMK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.HuySuaMK.Location = new System.Drawing.Point(212, 262);
-            this.HuySuaMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.HuySuaMK.Margin = new System.Windows.Forms.Padding(4);
             this.HuySuaMK.Name = "HuySuaMK";
             this.HuySuaMK.Size = new System.Drawing.Size(100, 37);
             this.HuySuaMK.TabIndex = 11;
@@ -74,12 +74,12 @@
             // mkHienTai
             // 
             this.mkHienTai.Location = new System.Drawing.Point(201, 112);
-            this.mkHienTai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mkHienTai.Margin = new System.Windows.Forms.Padding(4);
             this.mkHienTai.Multiline = true;
             this.mkHienTai.Name = "mkHienTai";
+            this.mkHienTai.PasswordChar = '*';
             this.mkHienTai.Size = new System.Drawing.Size(165, 34);
             this.mkHienTai.TabIndex = 9;
-            this.mkHienTai.UseSystemPasswordChar = true;
             // 
             // suaMKbt
             // 
@@ -89,7 +89,7 @@
             this.suaMKbt.Image = global::diem_danh.Properties.Resources.convert_32x32;
             this.suaMKbt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.suaMKbt.Location = new System.Drawing.Point(55, 262);
-            this.suaMKbt.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suaMKbt.Margin = new System.Windows.Forms.Padding(4);
             this.suaMKbt.Name = "suaMKbt";
             this.suaMKbt.Size = new System.Drawing.Size(112, 37);
             this.suaMKbt.TabIndex = 8;
@@ -101,7 +101,7 @@
             // suaTK
             // 
             this.suaTK.Location = new System.Drawing.Point(201, 68);
-            this.suaTK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suaTK.Margin = new System.Windows.Forms.Padding(4);
             this.suaTK.Multiline = true;
             this.suaTK.Name = "suaTK";
             this.suaTK.Size = new System.Drawing.Size(165, 34);
@@ -122,12 +122,12 @@
             // suaMK1
             // 
             this.suaMK1.Location = new System.Drawing.Point(201, 155);
-            this.suaMK1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suaMK1.Margin = new System.Windows.Forms.Padding(4);
             this.suaMK1.Multiline = true;
             this.suaMK1.Name = "suaMK1";
+            this.suaMK1.PasswordChar = '*';
             this.suaMK1.Size = new System.Drawing.Size(165, 34);
             this.suaMK1.TabIndex = 12;
-            this.suaMK1.UseSystemPasswordChar = true;
             // 
             // label3
             // 
@@ -156,12 +156,12 @@
             // suaXNMK
             // 
             this.suaXNMK.Location = new System.Drawing.Point(201, 201);
-            this.suaXNMK.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.suaXNMK.Margin = new System.Windows.Forms.Padding(4);
             this.suaXNMK.Multiline = true;
             this.suaXNMK.Name = "suaXNMK";
+            this.suaXNMK.PasswordChar = '*';
             this.suaXNMK.Size = new System.Drawing.Size(165, 34);
             this.suaXNMK.TabIndex = 14;
-            this.suaXNMK.UseSystemPasswordChar = true;
             // 
             // label7
             // 
@@ -195,7 +195,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SuaMK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SuaMK";

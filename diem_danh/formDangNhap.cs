@@ -107,8 +107,41 @@ namespace diem_danh
 
         private void quenMK_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            QuenMK f = new QuenMK();
-            f.Show();
+            
+
+            string tentk = tkDangNhap.Text;
+            string matkhau = mkDangNhap.Text;
+            if (tentk.Trim() == "" || matkhau.Trim() == "")
+            {
+                MessageBox.Show("Vui lòng nhập tên tài khoản và mật khẩu admin!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            else
+            {
+                string query = "Select * from TaiKhoan where TaiKhoan = '" + tentk + "' and MatKhau = '" + matkhau + "'";
+                if (modify.TaiKhoans(query).Count > 0) // 25'41 // check đăng nhập
+                {
+                    tkDangNhap.Text = "";
+                    mkDangNhap.Text = "";
+                    string sql1 = "select *from TaiKhoan where TaiKhoan = '" + tentk + "' and MatKhau = '" + matkhau + "' and Quyen = '" + "admin" + "'";
+                    if (modify.TaiKhoans(sql1).Count > 0) // 25'41  // check tài khoản có phải admin không
+                    {
+                        QuenMK f = new QuenMK();
+                        f.Show();
+                    }
+                    else
+                    {
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Đăng nhập thất bại!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    tkDangNhap.Text = "";
+                    mkDangNhap.Text = "";
+                }
+            }
+            
         }
 
         private void DangNhap_Load(object sender, EventArgs e)
