@@ -8,11 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevExpress.ClipboardSource.SpreadsheetML;
+using Newtonsoft.Json;
+
 
 namespace diem_danh
 {
     public partial class UserControl2 : UserControl
     {
+        String Data = "";
         public UserControl2()
         {
             InitializeComponent();
@@ -53,9 +57,49 @@ namespace diem_danh
             }
         }
 
-        private void comboPORT_SelectedIndexChanged(object sender, EventArgs e)
+        private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
+            //listBox1.Items.Clear();
+            //Data = serialPort1.ReadExisting();
+            //Invoke(new MethodInvoker(() => listBox1.Items.Add(Data)));
+           Data = serialPort1.ReadLine();
+           this.Invoke(new EventHandler(ShowData));
 
+        }
+        private void ShowData(object sender, EventArgs e)
+        {
+            //textData.Text = Data;
+            //Data = serialPort1.ReadLine();
+            //textBox1.Text = Data;
+            /*if (Data != "")
+            {
+                //Invoke(new MethodInvoker(() => listBox1.Items.Add(Data)));
+               //listBox1.Items.Add(Data);
+            }*/
+            //Data = serialPort1.ReadExisting();
+            if (serialPort1.IsOpen)
+            {
+
+                try // hàm bắt lỗi data json
+                {
+                    var Datajson = JsonConvert.DeserializeObject<dynamic>(Data.Trim());
+                    //Datajson.a
+                    string mode = Datajson.Mode; // lấy data json của từng nhãn
+                    string admin = Datajson.Admin;
+                    string id = Datajson.Id;
+                    string name = Datajson.Name;
+                    textBox1.Text = mode;
+                    textBox2.Text = admin;
+                    textBox3.Text = id;
+                    textBox4.Text = name;
+                    Data = "";
+                }
+                catch (Exception)
+                {
+
+                }
+            }
+            
         }
     }
 }

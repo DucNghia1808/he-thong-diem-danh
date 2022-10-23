@@ -150,3 +150,5 @@ E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.exe
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.pdb
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.UserControl1.resources
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.UserControl2.resources
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\Newtonsoft.Json.dll
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\Newtonsoft.Json.xml
