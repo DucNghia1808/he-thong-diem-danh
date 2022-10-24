@@ -135,7 +135,6 @@ E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.csproj.AssemblyReference.cache
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.csproj.SuggestedBindingRedirects.cache
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.DangNhap.resources
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.formKetNoiSerial.resources
-E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.formMain1.resources
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.formQuanLyTK.resources
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.formVanTay.resources
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.formXoaTaiKhoan.resources
@@ -152,3 +151,6 @@ E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.UserControl1.resources
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.UserControl2.resources
 E:\Do_An\diem-danh1\diem_danh\bin\Debug\Newtonsoft.Json.dll
 E:\Do_An\diem-danh1\diem_danh\bin\Debug\Newtonsoft.Json.xml
+E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.formMainNew.resources
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\vantay_nhanvien.mdf
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\vantay_nhanvien_log.ldf

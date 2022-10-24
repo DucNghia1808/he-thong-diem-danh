@@ -38,7 +38,6 @@ namespace diem_danh
         {
             if (quyentaikhoan == true)
             {
-                //MessageBox.Show("Quyền admin!");
                 string tentk = QuanLyTK.Text;
                 string matkhau = QuanLyMK.Text;
                 string xnmatkhau = QuanLyXnMK.Text;

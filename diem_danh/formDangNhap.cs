@@ -61,7 +61,7 @@ namespace diem_danh
                         formXoaTaiKhoan.quyentaikhoan = false;
                         QuenMK.quyentaikhoan = false;
                     }
-                    formMain1 f = new formMain1();
+                    formMainNew f = new formMainNew();
                     f.Show();
                     this.Hide();
                     f.Logout += F_Logout;
@@ -79,8 +79,8 @@ namespace diem_danh
 
         private void F_Logout(object sender, EventArgs e) // hàm ủy thác
         {
-            (sender as formMain1).isExit = false;
-            (sender as formMain1).Close();
+            (sender as formMainNew).isExit = false;
+            (sender as formMainNew).Close();
             this.Show();
         }
 

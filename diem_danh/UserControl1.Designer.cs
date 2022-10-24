@@ -49,7 +49,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.button1);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(675, 359);
+            this.Size = new System.Drawing.Size(701, 376);
             this.ResumeLayout(false);
 
         }

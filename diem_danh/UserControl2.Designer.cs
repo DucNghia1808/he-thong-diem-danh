@@ -38,15 +38,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.sqldataUART = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sqldataUART)).BeginInit();
             this.SuspendLayout();
             // 
             // comPortConnect
@@ -111,7 +112,7 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.listBox1);
+            this.groupControl2.Controls.Add(this.sqldataUART);
             this.groupControl2.Location = new System.Drawing.Point(324, 17);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(331, 327);
@@ -124,15 +125,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 1;
-            // 
-            // listBox1
-            // 
-            this.listBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(2, 23);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(327, 302);
-            this.listBox1.TabIndex = 0;
             // 
             // contextMenuStrip1
             // 
@@ -160,6 +152,15 @@
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 4;
             // 
+            // sqldataUART
+            // 
+            this.sqldataUART.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sqldataUART.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sqldataUART.Location = new System.Drawing.Point(2, 23);
+            this.sqldataUART.Name = "sqldataUART";
+            this.sqldataUART.Size = new System.Drawing.Size(327, 302);
+            this.sqldataUART.TabIndex = 0;
+            // 
             // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,11 +176,12 @@
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.label1);
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(675, 359);
+            this.Size = new System.Drawing.Size(701, 376);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.sqldataUART)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,11 +196,11 @@
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private System.Windows.Forms.Label label2;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridView sqldataUART;
     }
 }
