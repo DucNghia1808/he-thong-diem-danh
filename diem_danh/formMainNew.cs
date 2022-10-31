@@ -99,5 +99,10 @@ namespace diem_danh
             text_time.Text = DateTime.Now.ToLongTimeString();
             text_day.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
+
+        private void formMainNew_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -574,7 +574,7 @@
         hKXNCE+VQpWVcVNZWJ2LmpUMeC4Vj9wsGKWLY9I+IsUf/9k=
 </value>
   </data>
-  <data name="userControl11.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="userControl12.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEASABIAAD/4QBuRXhpZgAATU0AKgAAAAgAAwExAAIAAAAHAAAAMgISAAMAAAAC
         AAIAAodpAAQAAAABAAAAOgAAAABHb29nbGUAAAADkAAABwAAAAQwMjIwoAIABAAAAAEAAALtoAMABAAA
@@ -1490,10 +1490,7 @@
         U1lYnYualQx4LhWP3CwYpYtj0j4ixR//2Q==
 </value>
   </data>
-  <metadata name="ThoiGian.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="userControl12.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="userControl11.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEASABIAAD/4QBuRXhpZgAATU0AKgAAAAgAAwExAAIAAAAHAAAAMgISAAMAAAAC
         AAIAAodpAAQAAAABAAAAOgAAAABHb29nbGUAAAADkAAABwAAAAQwMjIwoAIABAAAAAEAAALtoAMABAAA
@@ -1951,4 +1948,7 @@
         U1lYnYualQx4LhWP3CwYpYtj0j4ixR//2Q==
 </value>
   </data>
+  <metadata name="ThoiGian.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

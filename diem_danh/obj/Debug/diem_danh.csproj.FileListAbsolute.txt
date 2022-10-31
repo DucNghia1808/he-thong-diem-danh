@@ -84,8 +84,6 @@ C:\Users\nghia\Downloads\diem-danh-d7f1ff1716af1cdc5db0e1492168b605ffcf48d8\diem
 C:\Users\nghia\Downloads\diem-danh-d7f1ff1716af1cdc5db0e1492168b605ffcf48d8\diem-danh-d7f1ff1716af1cdc5db0e1492168b605ffcf48d8\diem_danh\obj\Debug\diem_danh.formMain1.resources
 C:\Users\nghia\Downloads\diem-danh-d7f1ff1716af1cdc5db0e1492168b605ffcf48d8\diem-danh-d7f1ff1716af1cdc5db0e1492168b605ffcf48d8\diem_danh\obj\Debug\diem_danh.exe.licenses
 C:\Users\nghia\Downloads\diem-danh-d7f1ff1716af1cdc5db0e1492168b605ffcf48d8\diem-danh-d7f1ff1716af1cdc5db0e1492168b605ffcf48d8\diem_danh\obj\Debug\diem_danh.formKetNoiSerial.resources
-E:\Do_An\diem-danh1\diem_danh\bin\Debug\TaiKhoan.mdf
-E:\Do_An\diem-danh1\diem_danh\bin\Debug\TaiKhoan_log.ldf
 E:\Do_An\diem-danh1\diem_danh\bin\Debug\diem_danh.exe.config
 E:\Do_An\diem-danh1\diem_danh\bin\Debug\diem_danh.exe
 E:\Do_An\diem-danh1\diem_danh\bin\Debug\diem_danh.pdb

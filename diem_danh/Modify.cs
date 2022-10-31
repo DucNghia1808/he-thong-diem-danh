@@ -45,6 +45,25 @@ namespace diem_danh
                 sqlConnection.Close();
             }
         }
+        public string Command_getName(string query) // dung de them sua xoa) // query command
+        {
+            using (SqlConnection sqlConnection = Connection.GetSqlConnection())
+            {
+                string name = "";
+                string idvt = "";
+                sqlConnection.Open();
+                //sqlCommand = new SqlCommand(query, sqlConnection);
+                SqlCommand cmd1 = new SqlCommand(query, sqlConnection);
+                cmd1.Parameters.AddWithValue("ID", idvt);
+                SqlDataReader cmd2 = cmd1.ExecuteReader();
+                if (cmd2.Read())
+                {
+                    name = cmd2["Name"].ToString();
+                }
+                sqlConnection.Close();
+                return name;
+            }
+        }
 
         /////////////////////
         public DataTable Table(string query) // dung de show bang sql

@@ -44,17 +44,17 @@
             this.quenmatkhau = new System.Windows.Forms.Button();
             this.xoataikhoan = new System.Windows.Forms.Button();
             this.themtaikhoan = new System.Windows.Forms.Button();
+            this.text_day = new System.Windows.Forms.Label();
+            this.text_time = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.trangPhu = new System.Windows.Forms.Button();
             this.trangChinh = new System.Windows.Forms.Button();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.userControl11 = new diem_danh.UserControl1();
-            this.userControl21 = new diem_danh.UserControl2();
-            this.ThoiGian = new System.Windows.Forms.Timer(this.components);
             this.userControl12 = new diem_danh.UserControl1();
-            this.text_day = new System.Windows.Forms.Label();
-            this.text_time = new System.Windows.Forms.Label();
+            this.userControl21 = new diem_danh.UserControl2();
+            this.userControl11 = new diem_danh.UserControl1();
+            this.ThoiGian = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -293,13 +293,37 @@
             this.themtaikhoan.UseVisualStyleBackColor = false;
             this.themtaikhoan.Click += new System.EventHandler(this.themtaikhoan_Click);
             // 
+            // text_day
+            // 
+            this.text_day.AutoSize = true;
+            this.text_day.BackColor = System.Drawing.Color.Transparent;
+            this.text_day.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_day.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.text_day.Location = new System.Drawing.Point(95, 42);
+            this.text_day.Name = "text_day";
+            this.text_day.Size = new System.Drawing.Size(33, 16);
+            this.text_day.TabIndex = 77;
+            this.text_day.Text = "day";
+            // 
+            // text_time
+            // 
+            this.text_time.AutoSize = true;
+            this.text_time.BackColor = System.Drawing.Color.Transparent;
+            this.text_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_time.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.text_time.Location = new System.Drawing.Point(233, 42);
+            this.text_time.Name = "text_time";
+            this.text_time.Size = new System.Drawing.Size(36, 16);
+            this.text_time.TabIndex = 76;
+            this.text_time.Text = "time";
+            // 
             // tabPage3
             // 
             this.tabPage3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(859, 97);
+            this.tabPage3.Size = new System.Drawing.Size(859, 88);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Trợ Giúp";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -367,15 +391,15 @@
             this.panelControl1.Size = new System.Drawing.Size(701, 376);
             this.panelControl1.TabIndex = 0;
             // 
-            // userControl11
+            // userControl12
             // 
-            this.userControl11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl11.BackgroundImage")));
-            this.userControl11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl11.Location = new System.Drawing.Point(2, 2);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.Size = new System.Drawing.Size(697, 372);
-            this.userControl11.TabIndex = 0;
+            this.userControl12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl12.BackgroundImage")));
+            this.userControl12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl12.Location = new System.Drawing.Point(2, 2);
+            this.userControl12.Name = "userControl12";
+            this.userControl12.Size = new System.Drawing.Size(697, 372);
+            this.userControl12.TabIndex = 2;
             // 
             // userControl21
             // 
@@ -387,43 +411,19 @@
             this.userControl21.Size = new System.Drawing.Size(697, 372);
             this.userControl21.TabIndex = 1;
             // 
+            // userControl11
+            // 
+            this.userControl11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl11.BackgroundImage")));
+            this.userControl11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.userControl11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl11.Location = new System.Drawing.Point(2, 2);
+            this.userControl11.Name = "userControl11";
+            this.userControl11.Size = new System.Drawing.Size(697, 372);
+            this.userControl11.TabIndex = 0;
+            // 
             // ThoiGian
             // 
             this.ThoiGian.Tick += new System.EventHandler(this.ThoiGian_Tick);
-            // 
-            // userControl12
-            // 
-            this.userControl12.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("userControl12.BackgroundImage")));
-            this.userControl12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.userControl12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.userControl12.Location = new System.Drawing.Point(2, 2);
-            this.userControl12.Name = "userControl12";
-            this.userControl12.Size = new System.Drawing.Size(697, 372);
-            this.userControl12.TabIndex = 2;
-            // 
-            // text_day
-            // 
-            this.text_day.AutoSize = true;
-            this.text_day.BackColor = System.Drawing.Color.Transparent;
-            this.text_day.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_day.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.text_day.Location = new System.Drawing.Point(95, 42);
-            this.text_day.Name = "text_day";
-            this.text_day.Size = new System.Drawing.Size(33, 16);
-            this.text_day.TabIndex = 77;
-            this.text_day.Text = "day";
-            // 
-            // text_time
-            // 
-            this.text_time.AutoSize = true;
-            this.text_time.BackColor = System.Drawing.Color.Transparent;
-            this.text_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_time.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.text_time.Location = new System.Drawing.Point(233, 42);
-            this.text_time.Name = "text_time";
-            this.text_time.Size = new System.Drawing.Size(36, 16);
-            this.text_time.TabIndex = 76;
-            this.text_time.Text = "time";
             // 
             // formMainNew
             // 
@@ -436,6 +436,7 @@
             this.Text = "formMainNew";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.formMainNew_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formMainNew_FormClosed);
+            this.Load += new System.EventHandler(this.formMainNew_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
