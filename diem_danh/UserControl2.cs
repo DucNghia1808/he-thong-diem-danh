@@ -11,6 +11,9 @@ using System.Windows.Forms;
 using DevExpress.ClipboardSource.SpreadsheetML;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions; // thu vien
+using Excel = Microsoft.Office.Interop.Excel;
+using System.IO;
+using OfficeOpenXml;
 
 
 namespace diem_danh
@@ -24,39 +27,7 @@ namespace diem_danh
             string[] myport = SerialPort.GetPortNames();
             comboPORT.Items.AddRange(myport);// get port
         }
-
-        private void comPortConnect_Click(object sender, EventArgs e)
-        {
-            if (comboPORT.Text == "")
-            {
-                MessageBox.Show("Vui lòng kết nối cổng serial!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-            try
-            {
-                if (serialPort1.IsOpen)
-                {
-                    serialPort1.Close();
-                    comboPORT.Enabled = true;
-                    comPortConnect.Text = "Kết Nối";
-                    MessageBox.Show("Cổng serial đã đóng!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    serialPort1.PortName = comboPORT.Text;
-                    serialPort1.BaudRate = 115200; // Int.Parse(comboBaudrate.Text) // baudrate
-                    comboPORT.Enabled = false;
-                    serialPort1.Open();
-                    comPortConnect.Text = "Ngắt Kết Nối";
-                    MessageBox.Show("Đã kết nối!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Không thể kết nối cổng serial!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
         Modify modify = new Modify();
         private void serialPort1_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
@@ -89,8 +60,8 @@ namespace diem_danh
                     string admin = Datajson.Admin;
                     string id = Datajson.Id;
                     string name = Datajson.Name;
-                    textBox1.Text = mode;
-                    textBox2.Text = admin;
+                    //textBox1.Text = mode;
+                    //textBox2.Text = admin;
                     textBoxID.Text = id;
                     textBoxNAME.Text = name;
                     if (mode == "1" )  // mode == 1 them van tay
@@ -138,7 +109,7 @@ namespace diem_danh
                             sqldataUART.DataSource = modify.Table("Select * from VanTay");
                         }
                     }
-                    else if (mode == "3") // diem danh
+                    else if (mode == "3") // diem danh INPUT
                     {
                         // tim id lay ten gui ve STM
                         string ten_vantay = "";
@@ -147,15 +118,34 @@ namespace diem_danh
 
                         //MessageBox.Show("Tên vân tay " + ten_vantay +"!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         string dataName = "{\"NAME\":\"" + ten_vantay + "\"}";
+                        //MessageBox.Show("Đã thêm OK!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                         serialPort1.WriteLine(dataName);
+
                         // ADD day time vao new table 
                         string text_time = DateTime.Now.ToLongTimeString();
                         string text_day = DateTime.Now.ToString("dd/MM/yyyy");
-                        string querydiemdanh = "Insert into DiemDanh values ('" + ten_vantay + "', '" + id + "','" + text_time + "', '" + text_day + "' )";
+                        string querydiemdanh = "Insert into DiemDanh1 values ('" + ten_vantay + "', '" + id + "','" + text_time + "', '" + text_day + "','"+""+"' )";
                         modify.Command(querydiemdanh);
-                       // MessageBox.Show("Đã thêm OK!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //sqldataUART.DataSource = modify.Table("Select * from DiemDanh");
+                        MessageBox.Show("Đã thêm OK!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                    }
+                    else if (mode == "4") // diem danh INPUT
+                    {
+                        // tim id lay ten gui ve STM
+                        string ten_vantay = "";
+                        string query = "select Name from VanTay where ID='" + id + "'";
+                        ten_vantay = modify.Command_getName(query);
+                        string dataName = "{\"NAME\":\"" + ten_vantay + "\"}";
+                        serialPort1.WriteLine(dataName);/// gui ten ve
+
+
+                        // ADD day time OUT vao new table 
+                        string timeOUT = DateTime.Now.ToLongTimeString(); ;
+                        string query1 = "update DiemDanh1 set TimeOUT= '" + timeOUT + "'";
+                        query1 += "Where ID ='" + id + "'";
+                        modify.Command(query1);
+                        MessageBox.Show(" Điểm danh OUT thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     Data = "";
                 }
@@ -244,22 +234,95 @@ namespace diem_danh
 
         }
 
-        private void UserControl2_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void xoatest_Click(object sender, EventArgs e)
-        {
-            //string dataxoa = "{\"Xoa\":\"1\"}";
-            serialPort1.WriteLine("{\"Xoa\":\"1\"}");
-           // serialPort1.WriteLine(dataxoa);
-        }
 
         private void ThoiGian_Tick(object sender, EventArgs e)
         {
             //text_time.Text = DateTime.Now.ToLongTimeString();
            // text_day.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void hienthi_Click(object sender, EventArgs e)
+        {
+            sqldataUART.DataSource = modify.Table("Select * from VanTay");
+        }
+
+        private void comPortConnect_Click_1(object sender, EventArgs e)
+        {
+            if (comboPORT.Text == "")
+            {
+                MessageBox.Show("Vui lòng kết nối cổng serial!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            try
+            {
+                if (serialPort1.IsOpen)
+                {
+                    serialPort1.Close();
+                    comboPORT.Enabled = true;
+                    comPortConnect.Text = "Kết Nối";
+                    for (int i = 100; i>0; i--)
+                    {
+                        progressBar1.Value = i;
+                    }
+                    MessageBox.Show("Cổng serial đã đóng!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    serialPort1.PortName = comboPORT.Text;
+                    serialPort1.BaudRate = 115200; // Int.Parse(comboBaudrate.Text) // baudrate
+                    comboPORT.Enabled = false;
+                    serialPort1.Open();
+                    comPortConnect.Text = "Ngắt Kết Nối";
+                    for(int i = 1; i < 100; i++)
+                    {
+                        progressBar1.Value = i;
+                    }
+                    MessageBox.Show("Đã kết nối!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không thể kết nối cổng serial!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void ExportExcel(string path)
+        {
+            Excel.Application application = new Excel.Application();
+            application.Application.Workbooks.Add(Type.Missing);
+            for (int i = 0; i < sqldataUART.Columns.Count; i++)
+            {
+                application.Cells[1, i + 1] = sqldataUART.Columns[i].HeaderText;
+            }
+            for (int i = 0; i < sqldataUART.Rows.Count; i++)
+            {
+                for (int j = 0; j < sqldataUART.Columns.Count; j++)
+                {
+                    application.Cells[i + 2, j + 1] = sqldataUART.Rows[i].Cells[j].Value;
+                }
+            }
+            application.Columns.AutoFit();
+            application.ActiveWorkbook.SaveCopyAs(path);
+            application.ActiveWorkbook.Saved = true;
+
+        }
+        private void xuatExcel_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Title = "Export Excel";
+            saveFileDialog.Filter = "Excel (*.xlsx)|*.xlsx|Excel 2003 (*.xls)|*.xls";
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    ExportExcel(saveFileDialog.FileName);
+                    MessageBox.Show("Xuất file thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Xuất file không thành công!\n" + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

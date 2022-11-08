@@ -22,21 +22,7 @@ namespace diem_danh
             ThoiGian.Start();
             userControl11.Hide();
             userControl21.Hide();
-        }
-
-        private void splitContainer3_Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void splitContainer3_Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dangxuat_Click(object sender, EventArgs e)
-        {
-            Logout(this, new EventArgs());
+            userControl31.Hide();
         }
 
         private void trangChinh_Click(object sender, EventArgs e)
@@ -44,6 +30,8 @@ namespace diem_danh
             userControl11.Show();
             userControl11.BringToFront();
             userControl21.Hide();
+            userControl31.Hide();
+
         }
 
         private void trangPhu_Click(object sender, EventArgs e)
@@ -51,6 +39,14 @@ namespace diem_danh
             userControl21.Show();
             userControl21.BringToFront();
             userControl11.Hide();
+            userControl31.Hide();
+        }
+        private void trangDoThi_Click(object sender, EventArgs e)
+        {
+            userControl31.Show();
+            userControl31.BringToFront();
+            userControl11.Hide();
+            userControl21.Hide();
         }
 
         private void formMainNew_FormClosed(object sender, FormClosedEventArgs e)
@@ -70,37 +66,72 @@ namespace diem_danh
             }
         }
 
-        private void themtaikhoan_Click(object sender, EventArgs e)
-        {
-            formQuanLyTK f = new formQuanLyTK();
-            f.Show();
-        }
-
-        private void xoataikhoan_Click(object sender, EventArgs e)
-        {
-            formXoaTaiKhoan f = new formXoaTaiKhoan();
-            f.Show();
-        }
-
-        private void quenmatkhau_Click(object sender, EventArgs e)
-        {
-            QuenMK f = new QuenMK();
-            f.Show();
-        }
-
-        private void doimatkhau_Click(object sender, EventArgs e)
-        {
-            SuaMK f = new SuaMK();
-            f.Show();
-        }
 
         private void ThoiGian_Tick(object sender, EventArgs e)
         {
             text_time.Text = DateTime.Now.ToLongTimeString();
             text_day.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            timeHT.Text = DateTime.Now.ToLongTimeString();
+            dayHT.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
         private void formMainNew_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolthemtk_Click(object sender, EventArgs e)
+        {
+            formQuanLyTK f = new formQuanLyTK();
+            f.Show();
+        }
+
+        private void toolXoatk_Click(object sender, EventArgs e)
+        {
+            formXoaTaiKhoan f = new formXoaTaiKhoan();
+            f.Show();
+        }
+
+        private void toolQuenmk_Click(object sender, EventArgs e)
+        {
+            QuenMK f = new QuenMK();
+            f.Show();
+        }
+
+        private void toolDoimk_Click(object sender, EventArgs e)
+        {
+            SuaMK f = new SuaMK();
+            f.Show();
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            Logout(this, new EventArgs());
+        }
+        private void dữLiệuĐiểmDanhToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userControl11.Show();
+            userControl11.BringToFront();
+            userControl21.Hide();
+            userControl31.Hide();
+        }
+
+        private void kếtNốiThiếtBịToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userControl21.Show();
+            userControl21.BringToFront();
+            userControl11.Hide();
+            userControl31.Hide();
+        }
+        private void importFileExcelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            userControl31.Show();
+            userControl31.BringToFront();
+            userControl11.Hide();
+            userControl21.Hide();
+        }
+
+        private void toolStripButton3_Click(object sender, EventArgs e)
         {
 
         }

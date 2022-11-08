@@ -34,27 +34,47 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.nguoidung = new System.Windows.Forms.Button();
-            this.dangxuat = new System.Windows.Forms.Button();
-            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
+            this.toolDangxuat = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.timeHT = new System.Windows.Forms.Label();
+            this.dayHT = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.doimatkhau = new System.Windows.Forms.Button();
-            this.quenmatkhau = new System.Windows.Forms.Button();
-            this.xoataikhoan = new System.Windows.Forms.Button();
-            this.themtaikhoan = new System.Windows.Forms.Button();
+            this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.toolthemtk = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolXoatk = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolQuenmk = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolDoimk = new System.Windows.Forms.ToolStripButton();
             this.text_day = new System.Windows.Forms.Label();
             this.text_time = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.trangPhu = new System.Windows.Forms.Button();
-            this.trangChinh = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.dữLiệuĐiểmDanhToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.kếtNốiThiếtBịToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importFileExcelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.userControl31 = new diem_danh.UserControl3();
             this.userControl12 = new diem_danh.UserControl1();
             this.userControl21 = new diem_danh.UserControl2();
             this.userControl11 = new diem_danh.UserControl1();
             this.ThoiGian = new System.Windows.Forms.Timer(this.components);
+            this.toolStrip3 = new System.Windows.Forms.ToolStrip();
+            this.toolStripDropDownButton2 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -65,20 +85,21 @@
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
-            this.splitContainer6.Panel1.SuspendLayout();
-            this.splitContainer6.SuspendLayout();
+            this.toolDangxuat.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.Panel1.SuspendLayout();
             this.splitContainer3.Panel2.SuspendLayout();
             this.splitContainer3.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
+            this.toolStrip3.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -131,72 +152,118 @@
             // 
             // splitContainer5.Panel1
             // 
-            this.splitContainer5.Panel1.Controls.Add(this.nguoidung);
-            this.splitContainer5.Panel1.Controls.Add(this.dangxuat);
+            this.splitContainer5.Panel1.Controls.Add(this.toolDangxuat);
             this.splitContainer5.Panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             // 
             // splitContainer5.Panel2
             // 
-            this.splitContainer5.Panel2.Controls.Add(this.splitContainer6);
+            this.splitContainer5.Panel2.Controls.Add(this.timeHT);
+            this.splitContainer5.Panel2.Controls.Add(this.dayHT);
             this.splitContainer5.Size = new System.Drawing.Size(853, 82);
-            this.splitContainer5.SplitterDistance = 168;
+            this.splitContainer5.SplitterDistance = 610;
             this.splitContainer5.TabIndex = 0;
             // 
-            // nguoidung
+            // toolDangxuat
             // 
-            this.nguoidung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.nguoidung.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.nguoidung.Image = global::diem_danh.Properties.Resources.usergroup_32x32;
-            this.nguoidung.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.nguoidung.Location = new System.Drawing.Point(79, 3);
-            this.nguoidung.Name = "nguoidung";
-            this.nguoidung.Size = new System.Drawing.Size(68, 72);
-            this.nguoidung.TabIndex = 1;
-            this.nguoidung.Text = "Người Dùng";
-            this.nguoidung.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.nguoidung.UseVisualStyleBackColor = false;
+            this.toolDangxuat.AutoSize = false;
+            this.toolDangxuat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolDangxuat.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator3,
+            this.toolStripButton1,
+            this.toolStripSeparator5,
+            this.toolStripButton2,
+            this.toolStripSeparator7,
+            this.toolStripButton3,
+            this.toolStripSeparator6});
+            this.toolDangxuat.Location = new System.Drawing.Point(0, 0);
+            this.toolDangxuat.Name = "toolDangxuat";
+            this.toolDangxuat.Size = new System.Drawing.Size(610, 82);
+            this.toolDangxuat.TabIndex = 0;
+            this.toolDangxuat.Text = "toolStrip1";
             // 
-            // dangxuat
+            // toolStripSeparator3
             // 
-            this.dangxuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.dangxuat.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dangxuat.Image = global::diem_danh.Properties.Resources.bopermission_32x32;
-            this.dangxuat.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.dangxuat.Location = new System.Drawing.Point(5, 3);
-            this.dangxuat.Name = "dangxuat";
-            this.dangxuat.Size = new System.Drawing.Size(68, 72);
-            this.dangxuat.TabIndex = 0;
-            this.dangxuat.Text = "Đăng Xuất";
-            this.dangxuat.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.dangxuat.UseVisualStyleBackColor = false;
-            this.dangxuat.Click += new System.EventHandler(this.dangxuat_Click);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 82);
             // 
-            // splitContainer6
+            // toolStripButton1
             // 
-            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer6.Name = "splitContainer6";
+            this.toolStripButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton1.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButton1.Image = global::diem_danh.Properties.Resources.bouser_32x32;
+            this.toolStripButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(104, 79);
+            this.toolStripButton1.Text = "  Người Dùng   ";
+            this.toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             // 
-            // splitContainer6.Panel1
+            // toolStripSeparator5
             // 
-            this.splitContainer6.Panel1.Controls.Add(this.button1);
-            this.splitContainer6.Size = new System.Drawing.Size(681, 82);
-            this.splitContainer6.SplitterDistance = 312;
-            this.splitContainer6.TabIndex = 0;
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 82);
             // 
-            // button1
+            // toolStripButton2
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Image = global::diem_danh.Properties.Resources.usergroup_32x32;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(231, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 72);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Người Dùng";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button1.UseVisualStyleBackColor = false;
+            this.toolStripButton2.AutoSize = false;
+            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton2.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButton2.Image = global::diem_danh.Properties.Resources.bopermission_32x32;
+            this.toolStripButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(100, 79);
+            this.toolStripButton2.Text = "Đăng Xuất";
+            this.toolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 82);
+            // 
+            // toolStripButton3
+            // 
+            this.toolStripButton3.AutoSize = false;
+            this.toolStripButton3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripButton3.ForeColor = System.Drawing.Color.Black;
+            this.toolStripButton3.Image = global::diem_danh.Properties.Resources.insert_32x32;
+            this.toolStripButton3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton3.Name = "toolStripButton3";
+            this.toolStripButton3.Size = new System.Drawing.Size(100, 79);
+            this.toolStripButton3.Text = "   Thông Báo   ";
+            this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.toolStripButton3_Click);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 82);
+            // 
+            // timeHT
+            // 
+            this.timeHT.AutoSize = true;
+            this.timeHT.BackColor = System.Drawing.Color.Transparent;
+            this.timeHT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.timeHT.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.timeHT.Location = new System.Drawing.Point(34, 50);
+            this.timeHT.Name = "timeHT";
+            this.timeHT.Size = new System.Drawing.Size(36, 16);
+            this.timeHT.TabIndex = 78;
+            this.timeHT.Text = "time";
+            // 
+            // dayHT
+            // 
+            this.dayHT.AutoSize = true;
+            this.dayHT.BackColor = System.Drawing.Color.Transparent;
+            this.dayHT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dayHT.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.dayHT.Location = new System.Drawing.Point(34, 24);
+            this.dayHT.Name = "dayHT";
+            this.dayHT.Size = new System.Drawing.Size(33, 16);
+            this.dayHT.TabIndex = 79;
+            this.dayHT.Text = "day";
             // 
             // tabPage2
             // 
@@ -218,80 +285,102 @@
             // 
             // splitContainer3.Panel1
             // 
-            this.splitContainer3.Panel1.Controls.Add(this.doimatkhau);
-            this.splitContainer3.Panel1.Controls.Add(this.quenmatkhau);
-            this.splitContainer3.Panel1.Controls.Add(this.xoataikhoan);
-            this.splitContainer3.Panel1.Controls.Add(this.themtaikhoan);
-            this.splitContainer3.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer3_Panel1_Paint);
+            this.splitContainer3.Panel1.Controls.Add(this.toolStrip2);
             // 
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.text_day);
             this.splitContainer3.Panel2.Controls.Add(this.text_time);
-            this.splitContainer3.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer3_Panel2_Paint);
             this.splitContainer3.Size = new System.Drawing.Size(853, 82);
-            this.splitContainer3.SplitterDistance = 458;
+            this.splitContainer3.SplitterDistance = 471;
             this.splitContainer3.TabIndex = 0;
             // 
-            // doimatkhau
+            // toolStrip2
             // 
-            this.doimatkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.doimatkhau.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.doimatkhau.Image = global::diem_danh.Properties.Resources.assigntome_32x32;
-            this.doimatkhau.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.doimatkhau.Location = new System.Drawing.Point(299, 3);
-            this.doimatkhau.Name = "doimatkhau";
-            this.doimatkhau.Size = new System.Drawing.Size(89, 72);
-            this.doimatkhau.TabIndex = 4;
-            this.doimatkhau.Text = "  Đổi\r\nMật Khẩu";
-            this.doimatkhau.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.doimatkhau.UseVisualStyleBackColor = false;
-            this.doimatkhau.Click += new System.EventHandler(this.doimatkhau_Click);
+            this.toolStrip2.AutoSize = false;
+            this.toolStrip2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolthemtk,
+            this.toolStripSeparator1,
+            this.toolXoatk,
+            this.toolStripSeparator4,
+            this.toolQuenmk,
+            this.toolStripSeparator2,
+            this.toolDoimk});
+            this.toolStrip2.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip2.Name = "toolStrip2";
+            this.toolStrip2.Size = new System.Drawing.Size(471, 82);
+            this.toolStrip2.TabIndex = 1;
+            this.toolStrip2.Text = "toolStrip2";
             // 
-            // quenmatkhau
+            // toolthemtk
             // 
-            this.quenmatkhau.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.quenmatkhau.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.quenmatkhau.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
-            this.quenmatkhau.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.quenmatkhau.Location = new System.Drawing.Point(204, 3);
-            this.quenmatkhau.Name = "quenmatkhau";
-            this.quenmatkhau.Size = new System.Drawing.Size(89, 72);
-            this.quenmatkhau.TabIndex = 3;
-            this.quenmatkhau.Text = "   Quên \r\nMật Khẩu";
-            this.quenmatkhau.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.quenmatkhau.UseVisualStyleBackColor = false;
-            this.quenmatkhau.Click += new System.EventHandler(this.quenmatkhau_Click);
+            this.toolthemtk.AutoSize = false;
+            this.toolthemtk.AutoToolTip = false;
+            this.toolthemtk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolthemtk.Image = global::diem_danh.Properties.Resources.assignto_32x32;
+            this.toolthemtk.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolthemtk.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolthemtk.Name = "toolthemtk";
+            this.toolthemtk.Size = new System.Drawing.Size(104, 79);
+            this.toolthemtk.Text = "Thêm Tài Khoản";
+            this.toolthemtk.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolthemtk.Click += new System.EventHandler(this.toolthemtk_Click);
             // 
-            // xoataikhoan
+            // toolStripSeparator1
             // 
-            this.xoataikhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.xoataikhoan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.xoataikhoan.Image = global::diem_danh.Properties.Resources.clear_32x32;
-            this.xoataikhoan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.xoataikhoan.Location = new System.Drawing.Point(110, 3);
-            this.xoataikhoan.Name = "xoataikhoan";
-            this.xoataikhoan.Size = new System.Drawing.Size(89, 72);
-            this.xoataikhoan.TabIndex = 2;
-            this.xoataikhoan.Text = "  Xóa \r\nTài Khoản";
-            this.xoataikhoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.xoataikhoan.UseVisualStyleBackColor = false;
-            this.xoataikhoan.Click += new System.EventHandler(this.xoataikhoan_Click);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 82);
             // 
-            // themtaikhoan
+            // toolXoatk
             // 
-            this.themtaikhoan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.themtaikhoan.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.themtaikhoan.Image = global::diem_danh.Properties.Resources.assignto_32x32;
-            this.themtaikhoan.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.themtaikhoan.Location = new System.Drawing.Point(15, 3);
-            this.themtaikhoan.Name = "themtaikhoan";
-            this.themtaikhoan.Size = new System.Drawing.Size(89, 72);
-            this.themtaikhoan.TabIndex = 1;
-            this.themtaikhoan.Text = "  Thêm \r\nTài Khoản";
-            this.themtaikhoan.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.themtaikhoan.UseVisualStyleBackColor = false;
-            this.themtaikhoan.Click += new System.EventHandler(this.themtaikhoan_Click);
+            this.toolXoatk.AutoSize = false;
+            this.toolXoatk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolXoatk.Image = global::diem_danh.Properties.Resources.clear_32x32;
+            this.toolXoatk.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolXoatk.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolXoatk.Name = "toolXoatk";
+            this.toolXoatk.Size = new System.Drawing.Size(104, 79);
+            this.toolXoatk.Text = "Xóa Tài Khoản";
+            this.toolXoatk.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolXoatk.Click += new System.EventHandler(this.toolXoatk_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 82);
+            // 
+            // toolQuenmk
+            // 
+            this.toolQuenmk.AutoSize = false;
+            this.toolQuenmk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolQuenmk.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
+            this.toolQuenmk.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolQuenmk.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolQuenmk.Name = "toolQuenmk";
+            this.toolQuenmk.Size = new System.Drawing.Size(104, 79);
+            this.toolQuenmk.Text = "Quên Mật Khẩu";
+            this.toolQuenmk.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolQuenmk.Click += new System.EventHandler(this.toolQuenmk_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.AutoSize = false;
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 82);
+            // 
+            // toolDoimk
+            // 
+            this.toolDoimk.AutoSize = false;
+            this.toolDoimk.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolDoimk.Image = global::diem_danh.Properties.Resources.assigntome_32x32;
+            this.toolDoimk.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolDoimk.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolDoimk.Name = "toolDoimk";
+            this.toolDoimk.Size = new System.Drawing.Size(104, 79);
+            this.toolDoimk.Text = "Đổi Mật Khẩu";
+            this.toolDoimk.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolDoimk.Click += new System.EventHandler(this.toolDoimk_Click);
             // 
             // text_day
             // 
@@ -299,7 +388,7 @@
             this.text_day.BackColor = System.Drawing.Color.Transparent;
             this.text_day.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_day.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.text_day.Location = new System.Drawing.Point(95, 42);
+            this.text_day.Location = new System.Drawing.Point(135, 53);
             this.text_day.Name = "text_day";
             this.text_day.Size = new System.Drawing.Size(33, 16);
             this.text_day.TabIndex = 77;
@@ -311,7 +400,7 @@
             this.text_time.BackColor = System.Drawing.Color.Transparent;
             this.text_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_time.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.text_time.Location = new System.Drawing.Point(233, 42);
+            this.text_time.Location = new System.Drawing.Point(132, 20);
             this.text_time.Name = "text_time";
             this.text_time.Size = new System.Drawing.Size(36, 16);
             this.text_time.TabIndex = 76;
@@ -336,8 +425,9 @@
             // 
             // splitContainer2.Panel1
             // 
-            this.splitContainer2.Panel1.Controls.Add(this.trangPhu);
-            this.splitContainer2.Panel1.Controls.Add(this.trangChinh);
+            this.splitContainer2.Panel1.Controls.Add(this.toolStrip3);
+            this.splitContainer2.Panel1.Controls.Add(this.label1);
+            this.splitContainer2.Panel1.Controls.Add(this.toolStrip1);
             // 
             // splitContainer2.Panel2
             // 
@@ -348,40 +438,76 @@
             this.splitContainer2.SplitterDistance = 162;
             this.splitContainer2.TabIndex = 0;
             // 
-            // trangPhu
+            // label1
             // 
-            this.trangPhu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.trangPhu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.trangPhu.ForeColor = System.Drawing.Color.White;
-            this.trangPhu.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
-            this.trangPhu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.trangPhu.Location = new System.Drawing.Point(13, 140);
-            this.trangPhu.Name = "trangPhu";
-            this.trangPhu.Size = new System.Drawing.Size(137, 43);
-            this.trangPhu.TabIndex = 12;
-            this.trangPhu.Text = "Trang Phụ";
-            this.trangPhu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.trangPhu.UseVisualStyleBackColor = false;
-            this.trangPhu.Click += new System.EventHandler(this.trangPhu_Click);
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(22, 218);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 32);
+            this.label1.TabIndex = 99;
+            this.label1.Text = "QUẢN LÝ THÔNG TIN\r\n         NHÂN VIÊN";
             // 
-            // trangChinh
+            // toolStrip1
             // 
-            this.trangChinh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.trangChinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.trangChinh.ForeColor = System.Drawing.Color.White;
-            this.trangChinh.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
-            this.trangChinh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.trangChinh.Location = new System.Drawing.Point(13, 91);
-            this.trangChinh.Name = "trangChinh";
-            this.trangChinh.Size = new System.Drawing.Size(137, 43);
-            this.trangChinh.TabIndex = 11;
-            this.trangChinh.Text = "Trang Chính";
-            this.trangChinh.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.trangChinh.UseVisualStyleBackColor = false;
-            this.trangChinh.Click += new System.EventHandler(this.trangChinh_Click);
+            this.toolStrip1.AutoSize = false;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton1});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(162, 83);
+            this.toolStrip1.TabIndex = 14;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripDropDownButton1
+            // 
+            this.toolStripDropDownButton1.AutoSize = false;
+            this.toolStripDropDownButton1.AutoToolTip = false;
+            this.toolStripDropDownButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dữLiệuĐiểmDanhToolStripMenuItem,
+            this.kếtNốiThiếtBịToolStripMenuItem,
+            this.importFileExcelToolStripMenuItem});
+            this.toolStripDropDownButton1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton1.Image = global::diem_danh.Properties.Resources.tableproperties_32x32;
+            this.toolStripDropDownButton1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripDropDownButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton1.Name = "toolStripDropDownButton1";
+            this.toolStripDropDownButton1.Size = new System.Drawing.Size(88, 61);
+            this.toolStripDropDownButton1.Text = "Trang Chủ";
+            this.toolStripDropDownButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // dữLiệuĐiểmDanhToolStripMenuItem
+            // 
+            this.dữLiệuĐiểmDanhToolStripMenuItem.Image = global::diem_danh.Properties.Resources.insert_32x32;
+            this.dữLiệuĐiểmDanhToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.dữLiệuĐiểmDanhToolStripMenuItem.Name = "dữLiệuĐiểmDanhToolStripMenuItem";
+            this.dữLiệuĐiểmDanhToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
+            this.dữLiệuĐiểmDanhToolStripMenuItem.Text = "Dữ Liệu Điểm Danh";
+            this.dữLiệuĐiểmDanhToolStripMenuItem.Click += new System.EventHandler(this.dữLiệuĐiểmDanhToolStripMenuItem_Click);
+            // 
+            // kếtNốiThiếtBịToolStripMenuItem
+            // 
+            this.kếtNốiThiếtBịToolStripMenuItem.Image = global::diem_danh.Properties.Resources.technology_32x32;
+            this.kếtNốiThiếtBịToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.kếtNốiThiếtBịToolStripMenuItem.Name = "kếtNốiThiếtBịToolStripMenuItem";
+            this.kếtNốiThiếtBịToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
+            this.kếtNốiThiếtBịToolStripMenuItem.Text = "Kết Nối Thiết Bị";
+            this.kếtNốiThiếtBịToolStripMenuItem.Click += new System.EventHandler(this.kếtNốiThiếtBịToolStripMenuItem_Click);
+            // 
+            // importFileExcelToolStripMenuItem
+            // 
+            this.importFileExcelToolStripMenuItem.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
+            this.importFileExcelToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.importFileExcelToolStripMenuItem.Name = "importFileExcelToolStripMenuItem";
+            this.importFileExcelToolStripMenuItem.Size = new System.Drawing.Size(224, 38);
+            this.importFileExcelToolStripMenuItem.Text = "Import File Excel";
+            this.importFileExcelToolStripMenuItem.Click += new System.EventHandler(this.importFileExcelToolStripMenuItem_Click);
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.userControl31);
             this.panelControl1.Controls.Add(this.userControl12);
             this.panelControl1.Controls.Add(this.userControl21);
             this.panelControl1.Controls.Add(this.userControl11);
@@ -390,6 +516,14 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(701, 376);
             this.panelControl1.TabIndex = 0;
+            // 
+            // userControl31
+            // 
+            this.userControl31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.userControl31.Location = new System.Drawing.Point(2, 2);
+            this.userControl31.Name = "userControl31";
+            this.userControl31.Size = new System.Drawing.Size(697, 372);
+            this.userControl31.TabIndex = 3;
             // 
             // userControl12
             // 
@@ -425,6 +559,58 @@
             // 
             this.ThoiGian.Tick += new System.EventHandler(this.ThoiGian_Tick);
             // 
+            // toolStrip3
+            // 
+            this.toolStrip3.AutoSize = false;
+            this.toolStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButton2});
+            this.toolStrip3.Location = new System.Drawing.Point(0, 83);
+            this.toolStrip3.Name = "toolStrip3";
+            this.toolStrip3.Size = new System.Drawing.Size(162, 83);
+            this.toolStrip3.TabIndex = 100;
+            this.toolStrip3.Text = "toolStrip3";
+            // 
+            // toolStripDropDownButton2
+            // 
+            this.toolStripDropDownButton2.AutoSize = false;
+            this.toolStripDropDownButton2.AutoToolTip = false;
+            this.toolStripDropDownButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3});
+            this.toolStripDropDownButton2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripDropDownButton2.Image = global::diem_danh.Properties.Resources.usergroup_32x32;
+            this.toolStripDropDownButton2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripDropDownButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripDropDownButton2.Name = "toolStripDropDownButton2";
+            this.toolStripDropDownButton2.Size = new System.Drawing.Size(88, 61);
+            this.toolStripDropDownButton2.Text = "Xử Lý ";
+            this.toolStripDropDownButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Image = global::diem_danh.Properties.Resources.insert_32x32;
+            this.toolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(224, 38);
+            this.toolStripMenuItem1.Text = "Dữ Liệu Điểm Danh";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Image = global::diem_danh.Properties.Resources.technology_32x32;
+            this.toolStripMenuItem2.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(224, 38);
+            this.toolStripMenuItem2.Text = "Kết Nối Thiết Bị";
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Image = global::diem_danh.Properties.Resources.bodetails_32x32;
+            this.toolStripMenuItem3.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(224, 38);
+            this.toolStripMenuItem3.Text = "Import File Excel";
+            // 
             // formMainNew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,23 +631,30 @@
             this.tabPage1.ResumeLayout(false);
             this.splitContainer5.Panel1.ResumeLayout(false);
             this.splitContainer5.Panel2.ResumeLayout(false);
+            this.splitContainer5.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
-            this.splitContainer6.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
-            this.splitContainer6.ResumeLayout(false);
+            this.toolDangxuat.ResumeLayout(false);
+            this.toolDangxuat.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.splitContainer3.Panel1.ResumeLayout(false);
             this.splitContainer3.Panel2.ResumeLayout(false);
             this.splitContainer3.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
             this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
+            this.toolStrip3.ResumeLayout(false);
+            this.toolStrip3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -476,16 +669,6 @@
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.SplitContainer splitContainer5;
-        private System.Windows.Forms.SplitContainer splitContainer6;
-        private System.Windows.Forms.Button dangxuat;
-        private System.Windows.Forms.Button nguoidung;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button doimatkhau;
-        private System.Windows.Forms.Button quenmatkhau;
-        private System.Windows.Forms.Button xoataikhoan;
-        private System.Windows.Forms.Button themtaikhoan;
-        private System.Windows.Forms.Button trangPhu;
-        private System.Windows.Forms.Button trangChinh;
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private UserControl2 userControl21;
         private UserControl1 userControl11;
@@ -493,5 +676,35 @@
         private UserControl1 userControl12;
         private System.Windows.Forms.Label text_day;
         private System.Windows.Forms.Label text_time;
+        private UserControl3 userControl31;
+        private System.Windows.Forms.Label dayHT;
+        private System.Windows.Forms.Label timeHT;
+        private System.Windows.Forms.ToolStrip toolStrip2;
+        private System.Windows.Forms.ToolStripButton toolthemtk;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolXoatk;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripButton toolQuenmk;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripButton toolDoimk;
+        private System.Windows.Forms.ToolStrip toolDangxuat;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
+        private System.Windows.Forms.ToolStripMenuItem dữLiệuĐiểmDanhToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem kếtNốiThiếtBịToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importFileExcelToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStrip toolStrip3;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
     }
 }

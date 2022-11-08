@@ -152,3 +152,16 @@ E:\Do_An\diem-danh1\diem_danh\bin\Debug\Newtonsoft.Json.xml
 E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.formMainNew.resources
 E:\Do_An\diem-danh1\diem_danh\bin\Debug\vantay_nhanvien.mdf
 E:\Do_An\diem-danh1\diem_danh\bin\Debug\vantay_nhanvien_log.ldf
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\EPPlus.dll
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\EPPlus.Interfaces.dll
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\EPPlus.System.Drawing.dll
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\Microsoft.IO.RecyclableMemoryStream.dll
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\EPPlus.xml
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\Microsoft.IO.RecyclableMemoryStream.xml
+E:\Do_An\diem-danh1\diem_danh\obj\Debug\diem_danh.UserControl3.resources
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\ExcelDataReader.DataSet.dll
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\ExcelDataReader.dll
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\ExcelDataReader.pdb
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\ExcelDataReader.xml
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\ExcelDataReader.DataSet.pdb
+E:\Do_An\diem-danh1\diem_danh\bin\Debug\ExcelDataReader.DataSet.xml
