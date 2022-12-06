@@ -139,7 +139,6 @@ namespace diem_danh
                         string dataName = "{\"NAME\":\"" + ten_vantay + "\"}";
                         serialPort1.WriteLine(dataName);/// gui ten ve
 
-
                         // ADD day time OUT vao new table 
                         string timeOUT = DateTime.Now.ToLongTimeString(); ;
                         string query1 = "update DiemDanh1 set TimeOUT= '" + timeOUT + "'";

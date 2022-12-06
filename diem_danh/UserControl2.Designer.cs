@@ -33,6 +33,10 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.comboPORT = new System.Windows.Forms.ComboBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comPortConnect = new System.Windows.Forms.Button();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.sqldataUART = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -44,10 +48,6 @@
             this.hienthi = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.xuatExcel = new System.Windows.Forms.Button();
-            this.comPortConnect = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.comboPORT = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -84,6 +84,53 @@
             this.groupControl1.Size = new System.Drawing.Size(260, 181);
             this.groupControl1.TabIndex = 85;
             this.groupControl1.Text = "KẾT NỐI HỆ THỐNG";
+            // 
+            // comboPORT
+            // 
+            this.comboPORT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboPORT.FormattingEnabled = true;
+            this.comboPORT.Location = new System.Drawing.Point(111, 51);
+            this.comboPORT.Name = "comboPORT";
+            this.comboPORT.Size = new System.Drawing.Size(121, 23);
+            this.comboPORT.TabIndex = 95;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(10, 83);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(225, 23);
+            this.progressBar1.TabIndex = 94;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.label3.Location = new System.Drawing.Point(5, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 22);
+            this.label3.TabIndex = 93;
+            this.label3.Text = "COM PORT";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // comPortConnect
+            // 
+            this.comPortConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.comPortConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.comPortConnect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.comPortConnect.Image = global::diem_danh.Properties.Resources.insert_32x32;
+            this.comPortConnect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comPortConnect.Location = new System.Drawing.Point(35, 113);
+            this.comPortConnect.Margin = new System.Windows.Forms.Padding(4);
+            this.comPortConnect.Name = "comPortConnect";
+            this.comPortConnect.Size = new System.Drawing.Size(125, 40);
+            this.comPortConnect.TabIndex = 93;
+            this.comPortConnect.Text = "Kết Nối    ";
+            this.comPortConnect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.comPortConnect.UseVisualStyleBackColor = false;
+            this.comPortConnect.Click += new System.EventHandler(this.comPortConnect_Click_1);
             // 
             // groupControl2
             // 
@@ -212,53 +259,6 @@
             this.xuatExcel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.xuatExcel.UseVisualStyleBackColor = false;
             this.xuatExcel.Click += new System.EventHandler(this.xuatExcel_Click);
-            // 
-            // comPortConnect
-            // 
-            this.comPortConnect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.comPortConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.comPortConnect.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.comPortConnect.Image = global::diem_danh.Properties.Resources.insert_32x32;
-            this.comPortConnect.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.comPortConnect.Location = new System.Drawing.Point(35, 113);
-            this.comPortConnect.Margin = new System.Windows.Forms.Padding(4);
-            this.comPortConnect.Name = "comPortConnect";
-            this.comPortConnect.Size = new System.Drawing.Size(125, 40);
-            this.comPortConnect.TabIndex = 93;
-            this.comPortConnect.Text = "Kết Nối    ";
-            this.comPortConnect.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.comPortConnect.UseVisualStyleBackColor = false;
-            this.comPortConnect.Click += new System.EventHandler(this.comPortConnect_Click_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.label3.Location = new System.Drawing.Point(5, 51);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 22);
-            this.label3.TabIndex = 93;
-            this.label3.Text = "COM PORT";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(10, 83);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(225, 23);
-            this.progressBar1.TabIndex = 94;
-            // 
-            // comboPORT
-            // 
-            this.comboPORT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboPORT.FormattingEnabled = true;
-            this.comboPORT.Location = new System.Drawing.Point(111, 51);
-            this.comboPORT.Name = "comboPORT";
-            this.comboPORT.Size = new System.Drawing.Size(121, 23);
-            this.comboPORT.TabIndex = 95;
             // 
             // UserControl2
             // 

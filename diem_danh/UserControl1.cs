@@ -13,6 +13,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ToolTip;
 using System.IO;
 using OfficeOpenXml;
 using Excel = Microsoft.Office.Interop.Excel;
+//using static DevExpress.Data.Mask.Internal.MaskSettings<T>;
 
 
 namespace diem_danh
@@ -129,6 +130,13 @@ namespace diem_danh
         private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.FileName = "DuLieuDiemDanh_"+ DateTime.Now.ToString("dd") + ".xlsx";
+            ExportExcel(saveFileDialog.FileName);
         }
     }
 }
